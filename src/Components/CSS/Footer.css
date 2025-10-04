@@ -1,0 +1,50 @@
+* {
+  padding: 0;
+  margin: 0%;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+footer {
+  display: flex;
+  justify-content: space-between;
+  width: 98%;
+  margin: auto;
+}
+.logo_text {
+  font-size: 1.5rem;
+}
+ul {
+  list-style-type: none;
+}
+ul li {
+  margin-bottom: 5px;
+}
+.contact {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.aboutUs {
+  margin-block: 10px 20px;
+}
+.thirdLevelHeader {
+  margin-bottom: 4px;
+}
+
+.icon {
+  font-size: 1.2rem;
+}
+.email_input {
+  position: relative;
+  right: 16px;
+}
+
+button {
+  padding: 10px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+}
