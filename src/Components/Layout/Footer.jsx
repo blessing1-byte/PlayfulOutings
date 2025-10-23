@@ -1,63 +1,92 @@
 import React from "react";
-import { BsFillTelephoneInboundFill } from "react-icons/bs";
-import { MdEmail } from "react-icons/md";
-import "../CSS/Footer.css";
-import EmailInput from "../UI/EmailInput";
+import {
+  MapPin,
+  Phone,
+  Mail,
+  Send,
+  Facebook,
+  Twitter,
+  Instagram,
+  Linkedin,
+  Youtube,
+} from "lucide-react";
+import "../CSS/footer.css";
+import ScrollingTicker from "../UI/ScrollingTicker";
+
 export default function Footer() {
   return (
-    <div>
-      <footer>
-        <div className="Us">
-          <div className="logo">
-            <h2 className="logo_text">PlayfulOutings</h2>
-          </div>
-          <div className="aboutUs">
-            <h3 className="thirdLevelHeader">About Us</h3>
-            <p>talk about what you do </p>
-          </div>
-          <div className="contactUs">
-            <h3 className="thirdLevelHeader">Contact Us</h3>
-            <ul>
-              <li>
-                <div className="contact">
-                  <BsFillTelephoneInboundFill className="icon " />
-                  +91 9999 999 999
-                </div>
-              </li>
-              <li>
-                <div className="contact">
-                  <MdEmail className="icon " /> PlayfulOutings12@gmail.com
-                </div>
-              </li>
-            </ul>
+    <footer className="footer">
+      <div className="footer-content">
+        {/* === BRAND COLUMN === */}
+        <div className="footer-column">
+          <h2 className="footer-logo">PlayfulOutings</h2>
+          <p className="footer-text">
+            Discover exciting indoor and outdoor games, create memorable picnic
+            itineraries, and bring friends together for fun-filled experiences.
+          </p>
+
+          <div className="newsletter">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              className="newsletter-input"
+            />
+            <button className="newsletter-btn">
+              <Send size={18} />
+            </button>
           </div>
         </div>
-        <div className="information">
-          <h3 className="thirdLevelHeader">Information</h3>
+
+        {/* === QUICK LINKS === */}
+        <div className="footer-column">
+          <h3>Explore</h3>
           <ul>
+            <li>Home</li>
+            <li>Games</li>
+            <li>Itineraries</li>
             <li>About Us</li>
-            <li>More Search</li>
-            <li>Itinirerary</li>
-            <li>Events</li>
+            <li>Contact</li>
           </ul>
         </div>
-        <div className="Helpful_links">
-          <h3 className="thirdLevelHeader">Helpful Links</h3>
+
+        {/* === ACTIVITIES === */}
+        <div className="footer-column">
+          <h3>Activities</h3>
           <ul>
-            <li>Services</li>
-            <li>Supports</li>
-            <li>Terms and conditions</li>
-            <li>Privacy policies</li>
+            <li>Outdoor Adventures</li>
+            <li>Indoor Challenges</li>
+            <li>Team Games</li>
+            <li>Picnic Plans</li>
+            <li>Kids’ Fun</li>
           </ul>
         </div>
-        <div className="subscription">
-          <h3>Subscribe More Info</h3>
-          <div className="email_input">
-            <EmailInput />
+
+        {/* === CONTACT INFO === */}
+        <div className="footer-column">
+          <h3>Get in Touch</h3>
+          <ul className="contact-info">
+            <li>
+              <MapPin size={16} /> 12 Fun Street, Lagos, Nigeria
+            </li>
+            <li>
+              <Phone size={16} /> +234 707 036 9928
+            </li>
+            <li>
+              <Mail size={16} /> hello@playfuloutings.com
+            </li>
+          </ul>
+
+          <div className="socials">
+            <Facebook />
+            <Twitter />
+            <Instagram />
+            <Linkedin />
+            <Youtube />
           </div>
-          <button>Subscribe</button>
         </div>
-      </footer>
-    </div>
+      </div>
+
+      <ScrollingTicker />
+    </footer>
   );
 }

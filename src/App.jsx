@@ -1,15 +1,19 @@
-// import { BrowserRouter } from "react-router-dom";
+import React from "react";
+import { BrowserRouter, useRoutes } from "react-router-dom";
 import "./App.css";
-import Footer from "./Components/Layout/Footer";
-import Header from "./Components/Layout/Header";
-// import Header from './Components/Layout/Header';
+import { RouteConfig } from "./Components/Routes";
+
+function AppRoutes() {
+  // useRoutes must be called inside a component rendered within <BrowserRouter>
+  const element = useRoutes(RouteConfig);
+  return element;
+}
 
 function App() {
   return (
-    <>
-      <Header />
-      <Footer />
-    </>
+    <BrowserRouter>
+      <AppRoutes />
+    </BrowserRouter>
   );
 }
 

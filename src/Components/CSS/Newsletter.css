@@ -1,0 +1,131 @@
+/* CTA Section */
+.newsletter-cta {
+  background: linear-gradient(135deg, #e9f7ef, #d6eaf8);
+  text-align: center;
+  padding: 4rem 2rem;
+  border-radius: 16px;
+  margin: 3rem auto;
+  width: 90%;
+  max-width: 900px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.newsletter-content h2 {
+  font-size: 2rem;
+  color: #2e4053;
+  margin-bottom: 1rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.newsletter-content p {
+  font-size: 1.1rem;
+  color: #5d6d7e;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-btn {
+  background-color: #27ae60;
+  color: white;
+  font-size: 1rem;
+  padding: 0.9rem 2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.cta-btn:hover {
+  background-color: #1e8449;
+  transform: translateY(-2px);
+}
+
+/* Popup Styles */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-box {
+  background: #fff;
+  padding: 2rem 2.5rem;
+  border-radius: 12px;
+  text-align: center;
+  width: 90%;
+  max-width: 420px;
+  position: relative;
+  animation: popupIn 0.4s ease;
+}
+
+@keyframes popupIn {
+  from {
+    transform: translateY(-40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.popup-box h3 {
+  font-size: 1.6rem;
+  color: #2e4053;
+  margin-bottom: 0.5rem;
+}
+
+.popup-box p {
+  color: #5d6d7e;
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+.popup-box input {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.popup-box button {
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.8rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.popup-box button:hover {
+  background-color: #1e8449;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #5d6d7e;
+  transition: 0.2s;
+}
+
+.close-btn:hover {
+  color: #000;
+}

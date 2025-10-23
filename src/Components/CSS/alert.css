@@ -1,0 +1,38 @@
+/* Base alert box */
+.alert {
+  position: relative;
+  width: 100%;
+  border-radius: 8px;
+  padding: 1rem 1.2rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  font-family: system-ui, sans-serif;
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+/* Default alert */
+.alert-default {
+  background-color: #f7f7f7;
+  color: #333;
+  border-color: #dcdcdc;
+}
+
+/* Destructive alert */
+.alert-destructive {
+  background-color: #ffe8e8;
+  color: #a10000;
+  border-color: #ffb3b3;
+}
+
+/* Title */
+.alert-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+/* Description */
+.alert-description {
+  font-size: 0.9rem;
+  line-height: 1.4;
+}

@@ -1,0 +1,16 @@
+.skeleton {
+  border-radius: 6px;
+  background-color: #e5e7eb; /* muted background */
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+/* Add a subtle fade animation */
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
