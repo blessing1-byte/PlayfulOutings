@@ -1,0 +1,200 @@
+/* ================================
+   ✨ Modern About Page (Gold Theme)
+   ================================ */
+
+:root {
+  --gold: #e8c547;
+  --dark: #121212;
+  --gray: #6b6b6b;
+  --light: #f8f8f8;
+  --white: #fff;
+  --radius: 14px;
+}
+
+/* Base */
+.about-container {
+  font-family: "Poppins", sans-serif;
+  color: var(--dark);
+  overflow-x: hidden;
+}
+
+/* HERO */
+.hero {
+  background: url("https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Z29sZnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=500")
+    center/cover no-repeat;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(18, 18, 18, 0.3);
+  backdrop-filter: blur(1px);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: var(--white);
+  max-width: 700px;
+  animation: fadeIn 1.3s ease-in;
+}
+
+.hero-content h1 {
+  font-size: clamp(2.5rem, 6vw, 3.5rem);
+  font-weight: 800;
+  color: #000;
+  margin-bottom: 1rem;
+  letter-spacing: 0.5px;
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  color: #f2f2f2;
+  margin-bottom: 2rem;
+}
+
+/* STORY */
+.story {
+  padding: 100px 10%;
+  background: var(--white);
+  text-align: center;
+}
+.story h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+.story p {
+  max-width: 750px;
+  margin: 0 auto;
+  color: var(--gray);
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+
+/* VALUES */
+.values {
+  background: var(--light);
+  padding: 100px 10%;
+  text-align: center;
+}
+.values h2 {
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+}
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 30px;
+}
+.value-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 30px 20px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+  transition: 0.4s;
+}
+.value-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 25px rgba(232, 197, 71, 0.4);
+}
+.value-icon {
+  color: var(--gold);
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+/* VISION & MISSION */
+.vision-mission {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  padding: 100px 10%;
+  background: #fffbe6;
+}
+.card {
+  background: var(--white);
+  padding: 35px 25px;
+  border-radius: var(--radius);
+  border-left: 6px solid var(--gold);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s;
+}
+.card:hover {
+  transform: scale(1.02);
+}
+
+/* TEAM */
+.team {
+  text-align: center;
+  padding: 100px 10%;
+  background: var(--light);
+}
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 35px;
+  margin-top: 40px;
+}
+.team-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: 0.3s ease;
+}
+.team-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(232, 197, 71, 0.35);
+}
+.team-card img {
+  width: 100%;
+  border-radius: var(--radius);
+  margin-bottom: 15px;
+  height: 240px;
+  object-fit: cover;
+}
+.team-card h4 {
+  font-size: 1.1rem;
+  color: var(--dark);
+}
+.team-card p {
+  color: var(--gray);
+  font-size: 0.95rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RESPONSIVENESS */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+  .story,
+  .values,
+  .vision-mission,
+  .team {
+    padding: 70px 6%;
+  }
+}
+
+.btn {
+  text-decoration: none;
+  color: white;
+}
