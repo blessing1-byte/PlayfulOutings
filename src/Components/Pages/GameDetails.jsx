@@ -1,121 +1,79 @@
-// GameDetails.jsx
 import React from "react";
-import { Link, useParams } from "react-router-dom";
-import {
-  ChevronLeft,
-  Clock,
-  Trophy,
-  Star,
-  MapPin,
-  Calendar,
-  Users,
-} from "lucide-react";
-import { getGameIcon } from "../UI/gamesIcons";
+import { useParams, Link } from "react-router-dom";
+import { gamesData } from "../Data/gameData";
+import { Button } from "../UI/Button";
+import * as Icons from "lucide-react";
 import "../CSS/gamesDetails.css";
 
-export default function GameDetails({ gamesData }) {
-  const { category, name } = useParams();
-  const gameList = gamesData[category] || [];
-  const game = gameList.find((g) => g.name === name);
+export default function GameDetails() {
+  const { category, gameName } = useParams();
+
+  // Decode and normalize game name
+  const decodedName = decodeURIComponent(gameName)
+    .replace(/-/g, " ")
+    .trim()
+    .toLowerCase();
+
+  // Get category data safely
+  const categoryData = gamesData[category] || [];
+
+  // Find the game by normalized name
+  const game = categoryData.find(
+    (g) => g.name.toLowerCase().trim() === decodedName
+  );
 
   if (!game) {
+    console.warn(
+      `Game not found for category="${category}" and name="${decodedName}"`
+    );
     return (
-      <div className="game-details-container not-found">
+      <div className="not-found">
         <h2>Game not found</h2>
-        <Link to="/games" className="back-btn">
-          Back to Games
+        <Link to="/games">
+          <Button>Back to Games</Button>
         </Link>
       </div>
     );
   }
 
-  const GameIcon = getGameIcon(game.name);
+  const Icon = Icons[game.icon] || Icons.Gamepad2;
 
   return (
-    <div className="game-details-page">
-      <div className="details-container">
-        <Link to={`/category/${category}`} className="back-link">
-          <ChevronLeft size={20} />
-          Back to Category
-        </Link>
+    <section className="game-details">
+      <div className="game-details-container">
+        <img
+          src={game.image}
+          alt={game.name}
+          className="game-details-image"
+          loading="lazy"
+        />
 
-        <div className="details-card">
-          <div className="game-banner">
-            <img src={game.image} alt={game.name} className="banner-image" />
-            <div className="banner-overlay">
-              <div className="banner-content">
-                <div className="banner-icon-wrapper">
-                  <GameIcon size={32} />
-                </div>
-                <div>
-                  <h1 className="game-title">{game.name}</h1>
-                  <p className="game-type">{game.type}</p>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div className="game-info">
+          <h1 className="game-title">
+            <Icon size={22} className="inline-icon" /> {game.name}
+          </h1>
+          <p className="game-description">{game.description}</p>
 
-          <div className="details-content">
-            <div className="stats-grid">
-              <div className="stat-card stat-blue">
-                <div className="stat-header">
-                  <Users size={20} />
-                  <span className="stat-label">Age Group</span>
-                </div>
-                <p className="stat-value">{game.ageGroup}</p>
-              </div>
+          <div className="game-buttons">
+            <Button asChild className="view-itinerary-btn">
+              <Link
+                to={`/itinerary/${category}/${encodeURIComponent(
+                  game.name.toLowerCase().replace(/\s+/g, "-")
+                )}`}
+                className="button_link"
+              >
+                View Itinerary
+              </Link>
+            </Button>
 
-              <div className="stat-card stat-green">
-                <div className="stat-header">
-                  <Trophy size={20} />
-                  <span className="stat-label">Difficulty</span>
-                </div>
-                <p className="stat-value">{game.difficulty}</p>
-              </div>
-
-              <div className="stat-card stat-purple">
-                <div className="stat-header">
-                  <Clock size={20} />
-                  <span className="stat-label">Duration</span>
-                </div>
-                <p className="stat-value">{game.duration}</p>
-              </div>
-
-              <div className="stat-card stat-yellow">
-                <div className="stat-header">
-                  <Star size={20} />
-                  <span className="stat-label">Rating</span>
-                </div>
-                <p className="stat-value">{game.popularity} / 5</p>
-              </div>
-            </div>
-
-            <div className="location-section">
-              <div className="section-header">
-                <MapPin size={24} />
-                <h2 className="section-title">Available Locations</h2>
-              </div>
-              <p className="location-text">{game.locationAvailability}</p>
-            </div>
-
-            <Link
-              to={`/category/${category}/${encodeURIComponent(
-                game.name
-              )}/itinerary`}
-              className="itinerary-link"
-            >
-              <div className="itinerary-icon-wrapper">
-                <Calendar size={24} />
-              </div>
-              <div className="itinerary-text">
-                <h3>View Complete Itinerary</h3>
-                <p>Step-by-step guide to play this game</p>
-              </div>
-              <div className="itinerary-arrow">→</div>
-            </Link>
+            <Button variant="outline" asChild>
+              <Link to="/games" className="button_link_black">
+                Back to Games
+              </Link>
+            </Button>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../CSS/Newsletter.css";
 
-export default function NewsletterCTA() {
+export default function SignupCTA() {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
 
   const handleOpen = () => setIsPopupOpen(true);
@@ -10,15 +10,15 @@ export default function NewsletterCTA() {
   };
 
   return (
-    <section className="newsletter-cta">
-      <div className="newsletter-content">
-        <h2>Stay in the Loop!</h2>
+    <section className="signup-cta">
+      <div className="signup-content">
+        <h2>Join the Fun!</h2>
         <p>
-          Don’t miss out on new game ideas, picnic itineraries, and fun family
-          outings. Join our community and get updates straight to your inbox!
+          Create your free PlayfulOutings account to unlock exclusive games,
+          book picnic itineraries, and save your favorite activities.
         </p>
         <button className="cta-btn" onClick={handleOpen}>
-          Join the Fun
+          Sign Up Now
         </button>
       </div>
 
@@ -28,19 +28,31 @@ export default function NewsletterCTA() {
             <span className="close-btn" onClick={() => setIsPopupOpen(false)}>
               &times;
             </span>
-            <h3>Join Our Newsletter 🎉</h3>
-            <p>Stay updated with fun games, events, and outing ideas!</p>
+
+            <h3>Get Started 🎉</h3>
+            <p>Create your account to start exploring!</p>
+
             <form
               onSubmit={(e) => {
                 e.preventDefault();
-                alert("Thanks for signing up!");
+                alert("Account created successfully!");
                 setIsPopupOpen(false);
               }}
             >
-              <input type="text" placeholder="Your Name" required />
-              <input type="email" placeholder="Your Email" required />
-              <button type="submit">Subscribe</button>
+              <input type="text" placeholder="Full Name" required />
+              <input type="email" placeholder="Email Address" required />
+              <input type="password" placeholder="Create Password" required />
+              <button type="submit" className="signup-btn">
+                Sign Up
+              </button>
             </form>
+
+            <p className="login-text">
+              Already have an account?{" "}
+              <a href="/login" className="login-link">
+                Log in
+              </a>
+            </p>
           </div>
         </div>
       )}

@@ -34,7 +34,7 @@ const activityIcons = {
   "Sandcastle Building": Castle,
 };
 
-// 🎨 Activity image map
+// Activity image map
 const activityImages = {
   "Scavenger Hunt":
     "https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&q=60&w=600",

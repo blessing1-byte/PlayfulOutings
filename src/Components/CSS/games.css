@@ -1,130 +1,244 @@
-/* === Games Page Styles === */
+/* =====================================
+   ✨ GAMES PAGE - MODERN STYLING
+   ===================================== */
+
 .games-section {
-  padding: 60px 10%;
-  background-color: #fdfdfd;
-  font-family: "Poppins", sans-serif;
-  padding-top: 100px;
-  /* background-color: #9b59b6; */
-}
-
-.section-title {
+  padding: 7rem 5% 80px;
+  background: #f9fafb;
   text-align: center;
-  font-size: 2rem;
-  font-weight: 700;
-  color: #1b4b3e;
-  margin-bottom: 40px;
-  letter-spacing: 1px;
+  color: #1f2937;
+  font-family: "Poppins", sans-serif;
 }
 
-.game-category {
-  margin-bottom: 60px;
+/* --- Title --- */
+.section-title {
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 1rem;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  margin: 10px auto 0;
+  background: linear-gradient(90deg, #3b82f6, #60a5fa);
+  border-radius: 2px;
+}
+
+/* --- Filter Container --- */
+.filter-container {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.filter-input-wrapper {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 50px;
+  padding: 0.5rem 1rem;
+  width: 350px;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.filter-input-wrapper:hover,
+.filter-input-wrapper:focus-within {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+.filter-icon {
+  color: #3b82f6;
+  margin-right: 8px;
+}
+
+.filter-input {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 1rem;
+  color: #1f2937;
+  background: transparent;
+}
+
+/* --- Category Buttons --- */
+.category-filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 2.5rem;
+}
+
+.category-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0.6rem 1.2rem;
+  border-radius: 50px;
+  border: 1.5px solid #dbeafe;
+  background-color: #eff6ff;
+  color: #2563eb;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.category-btn:hover {
+  background-color: #3b82f6;
+  color: grey;
+  transform: scale(1.05);
+}
+
+.category-btn.active {
+  background: #3b82f6;
+  color: white;
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+}
+
+/* --- Category Section --- */
+.category-block {
+  margin-bottom: 3.5rem;
 }
 
 .category-title {
-  font-size: 1.6rem;
-  color: #000;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #0f172a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
   text-transform: capitalize;
-  margin-bottom: 25px;
+  margin-bottom: 1.2rem;
 }
 
+/* --- Game Grid --- */
 .games-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 25px;
+  gap: 2rem;
+  justify-content: center;
 }
 
+/* --- Game Card --- */
 .game-card {
-  background: #fff;
-  border-radius: 16px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  background: #ffffff;
+  border-radius: 18px;
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
+  text-align: left;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
 }
 
 .game-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.25);
 }
 
-.card-header img.game-image {
+/* --- Image --- */
+.game-image {
   width: 100%;
   height: 180px;
   object-fit: cover;
+  border-bottom: 1px solid #f1f5f9;
 }
 
+/* --- Card Content --- */
 .card-content {
-  padding: 16px;
+  padding: 1rem 1.25rem;
 }
 
-.card-title {
-  font-size: 1.25rem;
-  color: #333;
-  margin-bottom: 10px;
-  font-weight: 600;
+.card-content p {
+  font-size: 0.95rem;
+  color: #6b7280;
+  margin-top: 0.3rem;
+  line-height: 1.5;
 }
 
-.card-description {
-  color: #666;
-  font-size: 0.9rem;
-  margin-bottom: 10px;
-  line-height: 1.4;
+.inline-icon {
+  color: #3b82f6;
+  margin-right: 4px;
 }
 
-.game-tags {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-  margin-bottom: 12px;
-}
-
-.tag {
-  background-color: #e8f6ef;
-  color: #1b4b3e;
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-size: 0.8rem;
-  font-weight: 500;
-}
-
-.tag.difficulty {
-  background-color: #fff0d6;
-  color: #ff7b00;
-}
-
-.game-details {
-  list-style: none;
-  padding: 0;
-  margin: 10px 0;
-  font-size: 0.9rem;
-  color: #444;
-}
-
-.game-details li {
-  margin: 4px 0;
-}
-
+/* --- Card Footer --- */
 .card-footer {
-  padding: 12px 16px;
-  border-top: 1px solid #f0f0f0;
-  display: flex;
-  justify-content: flex-end;
+  padding: 1rem 1.25rem;
+  text-align: right;
 }
 
-.view-btn {
-  background-color: #ff7b00;
-  color: white;
-  font-weight: 500;
-  border-radius: 8px;
-  padding: 8px 14px;
-  transition: background-color 0.3s ease;
+/* --- Button Override --- */
+button,
+.category-btn {
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-.view-btn a {
-  text-decoration: none;
-  color: white;
+button:hover {
+  transform: scale(1.05);
 }
 
-.view-btn:hover {
-  background-color: #e76b00;
+/* --- No Results --- */
+.no-results {
+  font-size: 1.1rem;
+  color: #6b7280;
+  margin-top: 3rem;
+}
+
+/* --- Responsive --- */
+@media (max-width: 1024px) {
+  .section-title {
+    font-size: 2.3rem;
+  }
+
+  .filter-input-wrapper {
+    width: 300px;
+  }
+
+  .games-grid {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .filter-input-wrapper {
+    width: 90%;
+  }
+
+  .category-filter-bar {
+    gap: 0.5rem;
+  }
+
+  .game-card {
+    border-radius: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.6rem;
+  }
+
+  .filter-input-wrapper {
+    width: 100%;
+  }
+
+  .game-image {
+    height: 150px;
+  }
+
+  .category-btn {
+    font-size: 0.85rem;
+    padding: 0.5rem 1rem;
+  }
 }

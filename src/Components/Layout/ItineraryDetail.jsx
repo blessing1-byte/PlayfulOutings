@@ -1,89 +1,131 @@
 import React from "react";
-import { useParams, useNavigate } from "react-router-dom";
-import { getGameWithItinerary } from "../Data/utils";
+import { useParams, Link, useNavigate } from "react-router-dom";
+import { gamesData } from "../Data/gameData";
+import { Button } from "../UI/Button";
+import * as Icons from "lucide-react";
+import jsPDF from "jspdf";
+import "../CSS/itineraryDetail.css";
 
 export default function ItineraryDetail() {
-  const { slug } = useParams();
+  const { category, gameName } = useParams();
   const navigate = useNavigate();
-  const game = getGameWithItinerary(slug);
 
-  if (!game)
+  const formattedName = decodeURIComponent(gameName)
+    .replace(/-/g, " ")
+    .toLowerCase();
+
+  const categoryData = gamesData[category] || [];
+  const game = categoryData.find((g) => g.name.toLowerCase() === formattedName);
+
+  if (!game) {
     return (
-      <div className="text-center mt-20">
-        <h2 className="text-2xl font-semibold text-gray-700">
-          Itinerary not found 😕
-        </h2>
-        <button
-          onClick={() => navigate("/")}
-          className="mt-6 bg-orange-500 text-white px-5 py-2 rounded-lg hover:bg-orange-600 transition"
-        >
-          Go Back
-        </button>
+      <div className="itinerary-not-found">
+        <h2>Itinerary not found</h2>
+        <Link to="/games">
+          <Button>Back to Games</Button>
+        </Link>
       </div>
     );
+  }
+
+  const Icon = Icons[game.icon] || Icons.Gamepad2;
+
+  // 🧾 Generate Dynamic PDF
+  const handleDownloadPDF = () => {
+    const doc = new jsPDF();
+    doc.setFont("helvetica", "bold");
+    doc.text(game.name, 20, 20);
+
+    doc.setFont("helvetica", "normal");
+    doc.setFontSize(12);
+    doc.text(`Type: ${game.type}`, 20, 35);
+    doc.text(`Age Group: ${game.ageGroup}`, 20, 45);
+    doc.text(`Duration: ${game.duration}`, 20, 55);
+    doc.text(`Difficulty: ${game.difficulty}`, 20, 65);
+
+    doc.text("Description:", 20, 80);
+    doc.text(doc.splitTextToSize(game.description, 170), 20, 90);
+
+    if (game.instructions) {
+      doc.text("Instructions:", 20, 120);
+      doc.text(doc.splitTextToSize(game.instructions, 170), 20, 130);
+    }
+
+    doc.save(`${game.name}_instructions.pdf`);
+  };
 
   return (
-    <div className="max-w-4xl mx-auto p-6 md:p-10">
-      <img
-        src={game.image}
-        alt={game.title}
-        className="rounded-xl w-full h-64 object-cover shadow-md"
-      />
-      <h1 className="text-3xl font-bold text-orange-500 mt-6">{game.title}</h1>
-      <p className="text-gray-700 mt-3 text-lg">{game.description}</p>
-
-      <div className="mt-4 flex gap-3 flex-wrap">
-        <span
-          className={`text-white px-4 py-2 rounded-full text-sm font-semibold ${
-            game.type === "Indoor" ? "bg-sky-500" : "bg-green-500"
-          }`}
-        >
-          {game.type || "Activity"}
-        </span>
-        <span className="bg-gray-200 text-gray-700 px-4 py-2 rounded-full text-sm font-semibold">
-          Duration: {game.duration}
-        </span>
+    <section className="itinerary-detail">
+      <div className="itinerary-header">
+        <img src={game.image} alt={game.name} className="itinerary-image" />
+        <div>
+          <h1>
+            <Icon size={24} /> {game.name}
+          </h1>
+          <p>{game.type}</p>
+        </div>
       </div>
 
-      <div className="mt-8">
-        <h2 className="text-xl font-semibold mb-3">Locations</h2>
-        {game.locations?.map((loc, index) => (
-          <div key={index} className="mb-6 border rounded-lg p-4 shadow-sm">
-            <h3 className="text-lg font-semibold">{loc.name}</h3>
-            <p className="text-sm text-gray-600">{loc.address}</p>
-            <p className="mt-2 font-medium text-gray-800">{loc.price}</p>
-            <ul className="list-disc list-inside text-gray-700 mt-2">
-              {loc.activities.map((act, i) => (
-                <li key={i}>{act}</li>
-              ))}
-            </ul>
+      <div className="itinerary-info">
+        <p>
+          <Icons.Clock size={16} /> Duration: {game.duration}
+        </p>
+        <p>
+          <Icons.Users size={16} /> Age Group: {game.ageGroup}
+        </p>
+        <p>
+          <Icons.Star size={16} /> Popularity: {game.popularity}
+        </p>
+      </div>
+
+      <div className="itinerary-section">
+        <h2>Description</h2>
+        <p>{game.description}</p>
+      </div>
+
+      {game.instructions && (
+        <div className="itinerary-section">
+          <h2>Instructions</h2>
+          <p>{game.instructions}</p>
+        </div>
+      )}
+
+      {/* 🏞 Locations List */}
+      <div className="locations-section">
+        <h2>Available Locations</h2>
+        {game.locations.map((loc, i) => (
+          <div key={i} className="location-card">
+            <div className="loc-info">
+              <Icons.MapPin size={16} /> <strong>{loc.name}</strong>
+              <p>
+                Ticket Price:{" "}
+                {loc.ticketPrice > 0 ? `₦${loc.ticketPrice}` : "Free"}
+              </p>
+            </div>
+            {loc.ticketPrice > 0 && (
+              <Button
+                onClick={() =>
+                  navigate(`/book/${encodeURIComponent(loc.name)}`)
+                }
+              >
+                View & Book
+              </Button>
+            )}
           </div>
         ))}
       </div>
 
-      <div className="mt-8">
-        <h2 className="text-xl font-semibold mb-3">Itinerary Schedule</h2>
-        {game.itinerary?.map((day, index) => (
-          <div key={index} className="mb-4">
-            <h3 className="font-semibold text-orange-600">{day.day}</h3>
-            <ul className="mt-2 space-y-1 text-gray-700">
-              {day.schedule.map((item, i) => (
-                <li key={i}>
-                  <strong>{item.time}:</strong> {item.activity} ({item.location}
-                  )
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
-      </div>
+      <div className="itinerary-actions">
+        <Button onClick={handleDownloadPDF}>
+          <Icons.Download size={16} /> Download Instructions
+        </Button>
 
-      <button
-        onClick={() => navigate("/")}
-        className="mt-10 bg-orange-500 text-white px-6 py-3 rounded-lg hover:bg-orange-600 transition"
-      >
-        Back to Home
-      </button>
-    </div>
+        <Link to="/games">
+          <Button variant="outline">
+            <Icons.ArrowLeft size={16} /> Back to Games
+          </Button>
+        </Link>
+      </div>
+    </section>
   );
 }

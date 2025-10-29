@@ -1,108 +1,125 @@
 import React, { useState } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { MapPin, Clock, Star } from "lucide-react";
+import { gamesData } from "../Data/gameData";
+import AlertModal from "../UI/AlertModal";
 import "../CSS/Itinerary.css";
+import { Button } from "../UI/Button";
 
-// Keep your existing itineraryData here
-import { itineraryData } from "../Data/itineraryData"; // move your itineraryData object into /data/itineraryData.js
+const Itinerary = () => {
+  const navigate = useNavigate();
+  const [alertOpen, setAlertOpen] = useState(false);
+  const [selectedGame, setSelectedGame] = useState({ category: "", name: "" });
 
-export default function ItineraryPage() {
-  const { category, name, slug } = useParams();
-  const [activeDay, setActiveDay] = useState(0);
+  const categories = Object.keys(gamesData);
 
-  let itinerary = null;
+  // Handle view and booking logic
+  const handleViewAndBook = (category, gameName) => {
+    const user = JSON.parse(localStorage.getItem("loggedInUser"));
 
-  if (slug) {
-    itinerary = itineraryData.slugs[slug];
-  } else if (category && name) {
-    itinerary = itineraryData.games[category]?.[name];
-  }
+    if (!user) {
+      setSelectedGame({ category, name: gameName });
+      setAlertOpen(true);
+      return;
+    }
 
-  if (!itinerary) {
-    return (
-      <div className="itinerary-not-found">
-        <h2>Itinerary Not Found</h2>
-        <p>Sorry, we couldn't find the itinerary for this game.</p>
-        <Link to="/games" className="back-link">
-          ← Back to Games
-        </Link>
-      </div>
+    navigate(
+      `/itinerary/${category}/${gameName.toLowerCase().replace(/\s+/g, "-")}`
     );
-  }
+  };
 
   return (
-    <div className="itinerary-detail-container">
-      <div className="itinerary-header">
-        <Link to="/games" className="back-link">
-          ← Back to Games
-        </Link>
-        <h1 className="itinerary-title">{itinerary.title}</h1>
-        <p className="itinerary-description">{itinerary.description}</p>
-        <div className="itinerary-meta">
-          <span>📅 {itinerary.duration}</span>
+    <div className="itinerary-page">
+      {/*  Page Header */}
+      <h1 className="itinerary-title">Explore All Itineraries</h1>
+      <p className="itinerary-subtitle">
+        Browse through available games and their locations to plan your outing.
+      </p>
+
+      {/*  Render Categories */}
+      {categories.map((category) => (
+        <div key={category} className="itinerary-category">
+          <h2 className="category-title">{category.toUpperCase()}</h2>
+
+          <div className="itinerary-grid">
+            {gamesData[category].map((game) => {
+              const hasPaidLocation = game.locations.some(
+                (loc) => loc.ticketPrice && loc.ticketPrice > 0
+              );
+
+              return (
+                <div key={game.name} className="itinerary-card">
+                  <img
+                    src={game.image}
+                    alt={game.name}
+                    className="itinerary-img"
+                  />
+
+                  <div className="itinerary-info">
+                    <h3>{game.name}</h3>
+                    <p className="itinerary-desc">
+                      {game.description.slice(0, 90)}...
+                    </p>
+
+                    {/*  Duration and Rating */}
+                    <div className="itinerary-details">
+                      <div className="detail">
+                        <Clock size={16} />
+                        <span>{game.duration}</span>
+                      </div>
+                      <div className="detail">
+                        <Star size={16} />
+                        <span>{game.popularity} / 5</span>
+                      </div>
+                    </div>
+
+                    {/*  List of Locations */}
+                    <div className="itinerary-locations-list">
+                      {game.locations.map((location, i) => (
+                        <div key={i} className="location-item">
+                          <MapPin size={14} />
+                          <span>{location.name}</span>
+                        </div>
+                      ))}
+                    </div>
+
+                    {/*  Button or Free Label */}
+                    {hasPaidLocation ? (
+                      <Button
+                        className="view-btn"
+                        onClick={() => handleViewAndBook(category, game.name)}
+                      >
+                        View & Book
+                      </Button>
+                    ) : (
+                      <p className="free-label">
+                        Free Game — No Booking Needed
+                      </p>
+                    )}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
         </div>
-      </div>
+      ))}
 
-      {/* Suggested Locations */}
-      <section className="locations-section">
-        <h2 className="section-heading">📍 Suggested Locations</h2>
-        <div className="locations-grid">
-          {itinerary.locations.map((loc, i) => (
-            <div key={i} className="location-card">
-              <div className="location-image">
-                <img src={loc.image} alt={loc.name} />
-                <span className="location-type">{loc.type}</span>
-              </div>
-              <div className="location-content">
-                <h3>{loc.name}</h3>
-                <p>📍 {loc.address}</p>
-                <p>💰 {loc.price}</p>
-                <ul>
-                  {loc.activities.map((a, j) => (
-                    <li key={j}>✓ {a}</li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Day-by-Day Schedule */}
-      <section className="schedule-section">
-        <h2 className="section-heading">🗓️ Daily Plan</h2>
-
-        {/* Tabs */}
-        <div className="day-tabs">
-          {itinerary.itinerary.map((dayPlan, idx) => (
-            <button
-              key={idx}
-              className={`day-tab ${activeDay === idx ? "active" : ""}`}
-              onClick={() => setActiveDay(idx)}
-            >
-              {dayPlan.day}
-            </button>
-          ))}
-        </div>
-
-        {/* Schedule Details */}
-        <div className="schedule-content">
-          {itinerary.itinerary[activeDay].schedule.map((item, idx) => (
-            <div key={idx} className="schedule-item">
-              <div className="schedule-time">{item.time}</div>
-              <div className="schedule-details">
-                <h4>{item.activity}</h4>
-                <p>📍 {item.location}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <div className="itinerary-actions">
-        <button className="btn btn-primary">💾 Save Itinerary</button>
-        <button className="btn btn-secondary">⬇️ Download PDF</button>
-        <button className="btn btn-secondary">🔗 Share</button>
-      </div>
+      {/* ⚠️ Alert Modal */}
+      <AlertModal
+        isOpen={alertOpen}
+        title="Login Required"
+        message="You must log in to view and book this game."
+        confirmText="Login"
+        cancelText="Close"
+        showCloseIcon={false}
+        onConfirm={() => {
+          setAlertOpen(false);
+          navigate("/login");
+        }}
+        onClose={() => setAlertOpen(false)}
+      />
     </div>
   );
-}
+};
+
+export default Itinerary;
