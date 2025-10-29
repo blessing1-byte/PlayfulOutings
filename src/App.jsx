@@ -1,17 +1,18 @@
-// import { BrowserRouter } from "react-router-dom";
+import React from "react";
+import { BrowserRouter, useRoutes } from "react-router-dom";
 import "./App.css";
-import Footer from "./Components/Layout/Footer";
-import Header from "./Components/Layout/Header";
-import ContactUs from "./Components/Pages/ContactUs";
-// import Header from './Components/Layout/Header';
+import { RouteConfig } from "./Components/Routes";
+
+function AppRoutes() {
+  const element = useRoutes(RouteConfig);
+  return element;
+}
 
 function App() {
   return (
-    <>
-      <Header />
-      <ContactUs/>
-      <Footer />
-    </>
+    <BrowserRouter>
+      <AppRoutes />
+    </BrowserRouter>
   );
 }
 

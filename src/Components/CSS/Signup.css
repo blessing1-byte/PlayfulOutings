@@ -1,0 +1,111 @@
+/* =========================
+   SIGNUP PAGE STYLING
+   ========================= */
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Signup Heading */
+.login-container h2 {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+/* Form Container */
+.login-container form {
+  background: linear-gradient(135deg, #00c897, #007bff);
+  border-radius: 1rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+/* Input Fields */
+.login-container input {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 0.8rem;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.login-container input:focus {
+  border-color: #00c897;
+  box-shadow: 0 0 0 3px rgba(0, 200, 151, 0.15);
+}
+
+/* Submit Button */
+.login-container button {
+  background: #00c897;
+  color: #fff;
+  border: none;
+  border-radius: 0.8rem;
+  padding: 0.9rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.login-container button:hover {
+  background: #009a78;
+  transform: translateY(-1px);
+}
+
+/* Error Message */
+.error {
+  color: #ff4d4d;
+  font-size: 0.9rem;
+  background: rgba(255, 77, 77, 0.1);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+/* Footer / Redirect Text */
+.login-container p {
+  color: #fff;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+}
+
+.link {
+  text-decoration: none;
+  color: #000;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.link:hover {
+  color: rgb(96, 96, 96);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .login-container form {
+    padding: 1.5rem;
+  }
+
+  .login-container h2 {
+    font-size: 1.7rem;
+  }
+}

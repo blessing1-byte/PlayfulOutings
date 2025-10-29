@@ -1,0 +1,129 @@
+/* ============================
+   ITINERARY DETAIL PAGE — LIGHT BLUE THEME
+============================ */
+
+.itinerary-detail {
+  padding: 7rem 6% 70px;
+  background: linear-gradient(135deg, #f3f9ff, #e8f3ff);
+  min-height: 100vh;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.itinerary-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 30px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 22px;
+  padding: 30px;
+  box-shadow: 0 6px 20px rgba(77, 163, 255, 0.15);
+}
+
+.itinerary-image {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 18px;
+  object-fit: cover;
+}
+
+.itinerary-header h1 {
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  font-weight: 800;
+  color: #1f2c3a;
+}
+
+.itinerary-info {
+  margin: 25px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  color: #4c5b6a;
+  font-size: 0.98rem;
+}
+
+.itinerary-section {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 18px;
+  padding: 25px;
+  margin-bottom: 25px;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.05);
+}
+
+.itinerary-section h2 {
+  color: #2f88e6;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.itinerary-section p {
+  color: #5f6b7a;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.location-card {
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 16px rgba(77, 163, 255, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.loc-info strong {
+  color: #1f2c3a;
+  font-size: 1rem;
+}
+
+.loc-info p {
+  color: #5f6b7a;
+  font-size: 0.95rem;
+}
+
+.itinerary-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.itinerary-actions button {
+  background: #4da3ff;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.itinerary-actions button:hover {
+  background: #2f88e6;
+}
+
+/* 🔹 Responsive */
+@media (max-width: 768px) {
+  .itinerary-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .itinerary-info {
+    justify-content: center;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

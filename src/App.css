@@ -1,26 +1,13 @@
-/* styling for EmailInput Component */
-input[type="email"]::placeholder {
-  position: relative;
-  left: 1.5rem;
-  font-size: 0.8rem;
-  font-weight: lighter;
-}
-input[type="email"] {
-  padding: 10px;
-  border-radius: 8px;
-  color: white;
-}
-.email_input {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  margin-block: 10px;
+.container {
+  text-align: center;
+  margin-top: 100px;
+  font-family: Arial, sans-serif;
+  color: #333;
 }
 
-.subscribe_email {
-  font-size: 1.8rem;
-  position: relative;
-  left: 2rem;
+strong {
+  color: #2563eb;
 }
-/* end of the styling */
+body {
+  background: linear-gradient(to bottom, #faf5ff, #ffffff);
+}

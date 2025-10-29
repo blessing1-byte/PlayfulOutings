@@ -1,0 +1,113 @@
+/* --- Layout --- */
+.searchbar-container {
+  /* min-height: 100vh; */
+  /* background: linear-gradient(135deg, #eef3ff, #dfe8ff); */
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  position: relative;
+  bottom: 150px;
+  /* padding-top: 80px; */
+}
+
+.searchbar-box {
+  width: 100%;
+  max-width: 600px;
+  position: relative;
+}
+
+/* --- Input Box --- */
+.search-input-wrapper {
+  position: relative;
+}
+
+.search-input {
+  width: 100%;
+  padding: 14px 45px 14px 15px;
+  font-size: 1rem;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.search-input:focus {
+  border-color: #4b6bff;
+}
+
+.clear-btn {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: #888;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.clear-btn:hover {
+  color: #444;
+}
+
+/* --- Suggestions --- */
+.suggestions-box {
+  position: absolute;
+  width: 100%;
+  top: 60px;
+  background: #fff;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-height: 300px;
+  overflow-y: auto;
+  z-index: 20;
+}
+
+.suggestion-item {
+  padding: 10px 15px;
+  cursor: pointer;
+  border-left: 4px solid transparent;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.suggestion-item:hover {
+  background: #f7f9ff;
+  border-left-color: #4b6bff;
+}
+
+.suggestion-item.active {
+  background: #e9efff;
+  border-left-color: #4b6bff;
+}
+
+.suggestion-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.suggestion-text .type {
+  font-size: 0.85rem;
+  color: #777;
+  text-transform: capitalize;
+}
+
+.no-results {
+  text-align: center;
+  padding: 12px;
+  color: #999;
+  font-size: 0.95rem;
+}
+
+/* --- Scrollbar --- */
+.suggestions-box::-webkit-scrollbar {
+  width: 8px;
+}
+
+.suggestions-box::-webkit-scrollbar-thumb {
+  background-color: #c3c9ff;
+  border-radius: 4px;
+}

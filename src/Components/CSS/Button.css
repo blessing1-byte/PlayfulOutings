@@ -1,0 +1,109 @@
+/* Base Button Style */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.1s ease;
+  border: none;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Sizes */
+.btn.default {
+  height: 40px;
+  padding: 0 1rem;
+}
+
+.btn.sm {
+  height: 36px;
+  padding: 0 0.75rem;
+  font-size: 0.85rem;
+}
+
+.btn.lg {
+  height: 44px;
+  padding: 0 1.25rem;
+  font-size: 1rem;
+}
+
+.btn.icon {
+  height: 40px;
+  width: 40px;
+  padding: 0;
+}
+
+/* Variants */
+.btn.default {
+  background: #007bff;
+  color: #fff;
+}
+
+.btn.default:hover {
+  background: #0069d9;
+}
+
+.btn.destructive {
+  background: #dc3545;
+  color: #fff;
+}
+
+.btn.destructive:hover {
+  background: #c82333;
+}
+
+.btn.outline {
+  background: transparent;
+  border: 1px solid #ccc;
+  color: #333;
+}
+
+.btn.outline:hover {
+  background: #f8f9fa;
+}
+
+.btn.secondary {
+  background: #6c757d;
+  color: #fff;
+}
+
+.btn.secondary:hover {
+  background: #5a6268;
+}
+
+.btn.ghost {
+  background: transparent;
+  color: #333;
+}
+
+.btn.ghost:hover {
+  background: #f0f0f0;
+}
+
+.btn.link {
+  background: none;
+  color: #007bff;
+  text-decoration: underline;
+  padding: 0;
+}
+
+.btn.link:hover {
+  color: #0056b3;
+}
+
+/* Active and Focus */
+.btn:active {
+  transform: scale(0.97);
+}
+.btn:focus-visible {
+  outline: 2px solid #007bff;
+  outline-offset: 2px;
+}

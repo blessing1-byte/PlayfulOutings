@@ -1,0 +1,50 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 9999px;
+  border: 1px solid transparent;
+  padding: 4px 10px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+  cursor: default;
+  user-select: none;
+}
+
+/* === Variants === */
+.badge-default {
+  background-color: #007bff;
+  color: white;
+}
+
+.badge-default:hover {
+  background-color: #0069d9;
+}
+
+.badge-secondary {
+  background-color: #6c757d;
+  color: white;
+}
+
+.badge-secondary:hover {
+  background-color: #5a6268;
+}
+
+.badge-destructive {
+  background-color: #dc3545;
+  color: white;
+}
+
+.badge-destructive:hover {
+  background-color: #c82333;
+}
+
+.badge-outline {
+  background-color: transparent;
+  color: #333;
+  border-color: #ccc;
+}
+
+.badge-outline:hover {
+  background-color: #f3f3f3;
+}

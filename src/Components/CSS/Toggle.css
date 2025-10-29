@@ -1,0 +1,62 @@
+/* Base toggle styling */
+.toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 6px;
+  transition: all 0.25s ease;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  color: #333;
+}
+
+.toggle:hover {
+  background-color: #f3f3f3;
+  color: #555;
+}
+
+.toggle:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+/* Toggle ON state */
+.toggle.on {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Variants */
+.toggle.default {
+  border: none;
+}
+
+.toggle.outline {
+  border: 1px solid #ccc;
+  background-color: transparent;
+}
+
+.toggle.outline:hover {
+  background-color: #e9ecef;
+}
+
+/* Sizes */
+.toggle.default {
+  height: 40px;
+  padding: 0 12px;
+}
+
+.toggle.sm {
+  height: 36px;
+  padding: 0 10px;
+  font-size: 13px;
+}
+
+.toggle.lg {
+  height: 46px;
+  padding: 0 18px;
+  font-size: 15px;
+}

@@ -1,0 +1,33 @@
+.assistance {
+  background-image: url("https://images.unsplash.com/photo-1721097777541-eb4bdfe6719d?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjA3fHxzd2ltbWluZ3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=500");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 50vh;
+  color: black;
+  /* object-fit: contain; */
+}
+.Link {
+  text-decoration: none;
+  color: white;
+}
+
+.Link:hover {
+  color: rgb(228, 219, 219);
+}
+
+.assistance-details {
+  padding: 5% 0 0 10%;
+}
+
+.contact-button {
+  margin-top: 15px;
+}
+.cta {
+  margin-top: 10px;
+  font-size: 1.3rem;
+}
+
+.assistance_header {
+  font-size: 3rem;
+}
