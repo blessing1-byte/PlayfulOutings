@@ -129,7 +129,7 @@ const gamesData = {
       name: "Football (Soccer)",
       type: "Team Sport",
       image:
-        "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?w=400&h=300&fit=crop",
+        "https://images.unsplash.com/photo-1434648957308-5e6a859697e8?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Zm9vdGJhbGx8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=500",
       ageGroup: "6+",
       difficulty: "Medium",
       duration: "60-120 mins",
@@ -200,7 +200,7 @@ const gamesData = {
       name: "Basketball",
       type: "Team Sport",
       image:
-        "https://images.unsplash.com/photo-1504457046367-9a0e71a1c028?w=400&h=300&fit=crop",
+        "https://images.unsplash.com/photo-1577471488278-16eec37ffcc2?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGJhc2tldGJhbGx8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=500",
       ageGroup: "8+",
       difficulty: "Medium",
       duration: "40-60 mins",
@@ -247,10 +247,10 @@ const gamesData = {
     },
     {
       id: "running-001",
-      name: "Jogging/Running",
+      name: `Jogging or Running`,
       type: "Fitness Activity",
       image:
-        "https://images.unsplash.com/photo-1534367610401-9f5ed68180aa?w=400&h=300&fit=crop",
+        "https://images.unsplash.com/photo-1590646299178-1b26ab821e34?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8am9nZ2luZ3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=500",
       ageGroup: "6+",
       difficulty: "Easy",
       duration: "20-60 mins",
@@ -293,7 +293,7 @@ const gamesData = {
       name: "Roller Skating",
       type: "Recreational Sport",
       image:
-        "https://images.unsplash.com/photo-1554774853-d50f9c681e3a?w=400&h=300&fit=crop",
+        "https://images.unsplash.com/photo-1573655047687-6b0481e49c2e?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHJvbGxlcnNrYXRpbmd8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=500",
       ageGroup: "7+",
       difficulty: "Medium",
       duration: "30-90 mins",
@@ -336,7 +336,7 @@ const gamesData = {
       name: "Horse Riding",
       type: "Outdoor Adventure",
       image:
-        "https://images.unsplash.com/photo-1548676756-94d8a83a0a5a?w=400&h=300&fit=crop",
+        "https://images.unsplash.com/photo-1613085411234-9c83af5562d8?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8aG9yc2UlMjByaWRpbmd8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=500",
       ageGroup: "10+",
       difficulty: "Medium",
       duration: "30-60 mins",
@@ -387,7 +387,7 @@ const gamesData = {
       name: "Kayaking",
       type: "Water Sport",
       image:
-        "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=400&h=300&fit=crop",
+        "https://images.unsplash.com/photo-1620903669944-de50fbe78210?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8a2F5YWtpbmd8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=500",
       ageGroup: "12+",
       difficulty: "Medium",
       duration: "30-90 mins",
@@ -430,7 +430,7 @@ const gamesData = {
       name: "Archery",
       type: "Target Sport",
       image:
-        "https://images.unsplash.com/photo-1615486519696-6b7bdb7ff292?w=400&h=300&fit=crop",
+        "https://images.unsplash.com/photo-1686445921828-d9c22e714f24?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGFyY2hlcnl8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=500",
       ageGroup: "10+",
       difficulty: "Medium",
       duration: "30-60 mins",
@@ -481,7 +481,7 @@ const gamesData = {
       name: "Golf",
       type: "Precision Sport",
       image:
-        "https://images.unsplash.com/photo-1521412644187-c49fa049e84d?w=400&h=300&fit=crop",
+        "https://images.unsplash.com/photo-1611374243147-44a702c2d44c?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGdvbGZ8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=500",
       ageGroup: "12+",
       difficulty: "Medium",
       duration: "60-180 mins",
@@ -532,7 +532,7 @@ const gamesData = {
       name: "Hiking",
       type: "Outdoor Adventure",
       image:
-        "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=400&h=300&fit=crop",
+        "https://images.unsplash.com/photo-1551632811-561732d1e306?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aGlraW5nfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=500",
       ageGroup: "10+",
       difficulty: "Medium",
       duration: "60-240 mins",
@@ -579,7 +579,7 @@ const gamesData = {
       name: "Swimming",
       type: "Water Sport",
       image:
-        "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=400&h=300&fit=crop",
+        "https://images.unsplash.com/photo-1530549387789-4c1017266635?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c3dpbW1pbmd8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=500",
       ageGroup: "5+",
       difficulty: "Easy",
       duration: "30-90 mins",
@@ -1274,10 +1274,10 @@ const gamesData = {
     },
     {
       id: "tag-001",
-      name: "Tag/Chase",
+      name: "Tag or Chase",
       type: "Running Game",
       image:
-        "https://images.unsplash.com/photo-1503095396549-807759245b35?w=400&h=300&fit=crop",
+        "https://media.istockphoto.com/id/589135248/photo/family-spending-time-outdoors.webp?a=1&b=1&s=612x612&w=0&k=20&c=QQIohn8E4pEImKaY_ATreeSw76xRW1iZeBoniEocd5M=",
       ageGroup: "3+",
       difficulty: "Easy",
       duration: "15-45 mins",
@@ -1375,7 +1375,7 @@ const gamesData = {
       name: "Hide and Seek",
       type: "Stealth Game",
       image:
-        "https://images.unsplash.com/photo-1587654780291-39c9404d746b?w=400&h=300&fit=crop",
+        "https://plus.unsplash.com/premium_photo-1686920245768-d8eeaf0eedb5?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aGlkZSUyMGFuZCUyMHNlZWt8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=500",
       ageGroup: "4+",
       difficulty: "Easy",
       duration: "20-60 mins",
@@ -1557,7 +1557,7 @@ const gamesData = {
       name: "Dodgeball",
       type: "Team Sport",
       image:
-        "https://images.unsplash.com/photo-1519861531473-9200262188bf?w=400&h=300&fit=crop",
+        "https://images.unsplash.com/photo-1631801751858-9f4f5a2fbdb4?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8ZG9kZ2UlMjBiYWxsfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=500",
       ageGroup: "8+",
       difficulty: "Easy",
       duration: "20-40 mins",
@@ -2053,7 +2053,7 @@ const gamesData = {
     },
     {
       id: "clue-001",
-      name: "Clue/Cluedo",
+      name: "Clue or Cluedo",
       type: "Mystery Game",
       image:
         "https://images.unsplash.com/photo-1609710228159-0fa9bd7c0827?w=400&h=300&fit=crop",
@@ -2356,7 +2356,7 @@ const gamesData = {
       name: "Snakes and Ladders",
       type: "Board Game",
       image:
-        "https://images.unsplash.com/photo-1611890547346-8bbfdcea8d9e?w=400&h=300&fit=crop",
+        "https://plus.unsplash.com/premium_photo-1719360604064-b5daefd62d7e?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=812",
       ageGroup: "4+",
       difficulty: "Easy",
       duration: "20-40 mins",
@@ -2508,7 +2508,7 @@ const gamesData = {
       name: "Connect Four",
       type: "Strategy Game",
       image:
-        "https://images.unsplash.com/photo-1611890547346-8bbfdcea8d9e?w=400&h=300&fit=crop",
+        "https://plus.unsplash.com/premium_photo-1664441073669-583c0ee842d3?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Y29ubmVjdCUyMGZvdXJ8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=500",
       ageGroup: "6+",
       difficulty: "Easy",
       duration: "10-20 mins",
@@ -2733,7 +2733,7 @@ const gamesData = {
       name: "Duck Duck Goose",
       type: "Circle Game",
       image:
-        "https://images.unsplash.com/photo-1503095396549-807759245b35?w=400&h=300&fit=crop",
+        "https://media.istockphoto.com/id/531884613/photo/happy-children-playing-duck-goose-game-outside.webp?a=1&b=1&s=612x612&w=0&k=20&c=XnQrrPTqmBgH5jZ4qJLW28aeL6mUFlILfMOq_X03yP4=",
       ageGroup: "3-8",
       difficulty: "Easy",
       duration: "15-30 mins",
@@ -2861,7 +2861,7 @@ const gamesData = {
       name: "Red Light Green Light",
       type: "Movement Game",
       image:
-        "https://images.unsplash.com/photo-1503095396549-807759245b35?w=400&h=300&fit=crop",
+        "https://images.unsplash.com/photo-1636542980176-cd7822b5a5cd?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cmVkJTIwbGlnaHQlMjBncmVlbiUyMGxpZ2h0fGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=500",
       ageGroup: "4-10",
       difficulty: "Easy",
       duration: "10-20 mins",
@@ -2925,7 +2925,7 @@ const gamesData = {
       name: "Freeze Dance",
       type: "Music Game",
       image:
-        "https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=400&h=300&fit=crop",
+        "https://images.unsplash.com/photo-1609602726003-77a7bf096919?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGZyZWV6ZSUyMGRhbmNlfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=500",
       ageGroup: "3-10",
       difficulty: "Easy",
       duration: "10-20 mins",
@@ -2991,69 +2991,8 @@ const gamesData = {
       ],
     },
     {
-      id: "hot-potato-001",
-      name: "Hot Potato",
-      type: "Passing Game",
-      image:
-        "https://images.unsplash.com/photo-1509390298614-cfb6fc6c1980?w=400&h=300&fit=crop",
-      ageGroup: "4-10",
-      difficulty: "Easy",
-      duration: "10-20 mins",
-      popularity: 4.4,
-      description:
-        "Fast-paced game where children pass an object around a circle before music stops.",
-      locations: [
-        {
-          name: "Anywhere",
-          address: "Home, classroom, party",
-          price: "Free",
-          ticketPrice: 0,
-          equipment: "Bean bag or soft ball, music player",
-          activities: [
-            "Quick reflexes",
-            "Passing skills",
-            "Circle game",
-            "Party favorite",
-          ],
-        },
-      ],
-      itinerary: [
-        {
-          time: "0:00",
-          activity: "Children sit in circle",
-          location: "Circle Formation",
-        },
-        {
-          time: "0:02",
-          activity: 'Start music, begin passing "hot potato"',
-          location: "Game Start",
-        },
-        {
-          time: "0:04",
-          activity: "Pass quickly around circle",
-          location: "Passing",
-        },
-        {
-          time: "0:06",
-          activity: "Music stops randomly",
-          location: "Music Stop",
-        },
-        {
-          time: "0:07",
-          activity: "Child holding potato is out",
-          location: "Elimination",
-        },
-        {
-          time: "0:09",
-          activity: "Resume with remaining players",
-          location: "Continue",
-        },
-        { time: "0:15", activity: "Last player wins", location: "Victory" },
-      ],
-    },
-    {
       id: "memory-game-001",
-      name: "Memory/Matching Game",
+      name: "Memory or Matching Game",
       type: "Card Game",
       image:
         "https://images.unsplash.com/photo-1606167668584-78701c57f13d?w=400&h=300&fit=crop",
@@ -3116,7 +3055,7 @@ const gamesData = {
       name: "Candy Land",
       type: "Board Game",
       image:
-        "https://images.unsplash.com/photo-1611890547346-8bbfdcea8d9e?w=400&h=300&fit=crop",
+        "https://plus.unsplash.com/premium_photo-1700001212542-d87797815337?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGNhbmR5JTIwbGFuZHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=500",
       ageGroup: "3-6",
       difficulty: "Easy",
       duration: "15-30 mins",
@@ -3301,7 +3240,7 @@ const gamesData = {
       name: "Jump Rope",
       type: "Physical Game",
       image:
-        "https://images.unsplash.com/photo-1503095396549-807759245b35?w=400&h=300&fit=crop",
+        "https://plus.unsplash.com/premium_photo-1683120787591-453e8ccb63ef?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8anVtcCUyMHJvcGV8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=500",
       ageGroup: "5-12",
       difficulty: "Medium",
       popularity: 4.5,
@@ -3671,7 +3610,7 @@ const gamesData = {
       name: "Paintball",
       type: "Combat Sport",
       image:
-        "https://images.unsplash.com/photo-1563299796-17596ed6b017?w=400&h=300&fit=crop",
+        "https://images.unsplash.com/photo-1614602355999-bc295cba75b5?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGFpbnRiYWxsfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=500",
       ageGroup: "12+",
       difficulty: "Medium",
       duration: "120-180 mins",
@@ -3811,7 +3750,7 @@ const gamesData = {
     },
     {
       id: "boxing-001",
-      name: "Boxing/Sparring",
+      name: "Boxing or Sparring",
       type: "Combat Sport",
       image:
         "https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?w=400&h=300&fit=crop",
@@ -4120,7 +4059,7 @@ const gamesData = {
       name: "Scrabble",
       type: "Word Game",
       image:
-        "https://images.unsplash.com/photo-1632501641765-e568d28b0015?w=400&h=300&fit=crop",
+        "https://images.unsplash.com/photo-1621243545234-a6b0bae02a68?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c2NyYWJibGV8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=500",
       ageGroup: "8+",
       difficulty: "Medium",
       duration: "60-90 mins",
@@ -4360,7 +4299,7 @@ const gamesData = {
       name: "Jenga",
       type: "Stacking Game",
       image:
-        "https://images.unsplash.com/photo-1609710228159-0fa9bd7c0827?w=400&h=300&fit=crop",
+        "https://images.unsplash.com/photo-1644628270163-a2ccfb778a9c?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8amVuZ2F8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=500",
       ageGroup: "6+",
       difficulty: "Easy",
       duration: "15-30 mins",
@@ -4523,7 +4462,7 @@ const gamesData = {
       name: "Billiards/Pool",
       type: "Cue Sport",
       image:
-        "https://images.unsplash.com/photo-1604245887864-6464b38c1916?w=400&h=300&fit=crop",
+        "https://images.unsplash.com/photo-1575553939928-d03b21323afe?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YmlsbGFyZHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=500",
       ageGroup: "12+",
       difficulty: "Medium",
       duration: "30-90 mins",
@@ -4597,7 +4536,7 @@ const gamesData = {
       name: "Checkers",
       type: "Board Game",
       image:
-        "https://images.unsplash.com/photo-1586165368502-1bad197a6461?w=400&h=300&fit=crop",
+        "https://plus.unsplash.com/premium_photo-1720612506802-411ff05a70a5?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Y2hlY2tlcnN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=500",
       ageGroup: "5+",
       difficulty: "Easy",
       duration: "15-30 mins",
@@ -4662,7 +4601,7 @@ const gamesData = {
       name: "Darts",
       type: "Throwing Game",
       image:
-        "https://images.unsplash.com/photo-1628840042765-356cda07504e?w=400&h=300&fit=crop",
+        "https://plus.unsplash.com/premium_photo-1709043363530-392337b7fe80?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGRhcnRzfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=500",
       ageGroup: "10+",
       difficulty: "Medium",
       duration: "20-40 mins",
@@ -4749,7 +4688,7 @@ const gamesData = {
       name: "Carrom",
       type: "Board Game",
       image:
-        "https://images.unsplash.com/photo-1611371805429-8b5c1b2c34ba?w=400&h=300&fit=crop",
+        "https://images.unsplash.com/photo-1652558973183-a3f046921163?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y2Fycm9tfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=500",
       ageGroup: "6+",
       difficulty: "Easy",
       duration: "20-40 mins",
@@ -4819,7 +4758,7 @@ const gamesData = {
       name: "Ludo",
       type: "Board Game",
       image:
-        "https://images.unsplash.com/photo-1611890547346-8bbfdcea8d9e?w=400&h=300&fit=crop",
+        "https://images.unsplash.com/photo-1642056445424-fc9059cb737a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bHVkb3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=500",
       ageGroup: "4+",
       difficulty: "Easy",
       duration: "20-40 mins",
@@ -4978,7 +4917,7 @@ const gamesData = {
       name: "Just Dance",
       type: "Music Game",
       image:
-        "https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=400&h=300&fit=crop",
+        "https://plus.unsplash.com/premium_photo-1681492529719-a1d3d8cc498a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8ZGFuY2V8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=500",
       ageGroup: "8+",
       difficulty: "Easy",
       duration: "30-60 mins",
@@ -5067,7 +5006,7 @@ const gamesData = {
       name: "Yoga Bliss",
       type: "Fitness Game",
       image:
-        "https://images.unsplash.com/photo-1575052814086-f385e2e2ad1d?w=400&h=300&fit=crop",
+        "https://images.unsplash.com/photo-1575052814086-f385e2e2ad1b?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8eW9nYXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=500",
       ageGroup: "16+",
       difficulty: "Easy",
       duration: "1 hour",
@@ -5109,7 +5048,7 @@ const gamesData = {
       name: "Sip & Paint",
       type: "Creative Game",
       image:
-        "https://images.unsplash.com/photo-1557682224-5b8590cd9ec5?w=400&h=300&fit=crop",
+        "https://images.unsplash.com/photo-1723408778833-75cde5f11d50?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=435",
       ageGroup: "18+",
       difficulty: "Easy",
       duration: "2 hours",
@@ -5158,7 +5097,7 @@ const gamesData = {
       name: "DIY Fashion Runway",
       type: "Style Game",
       image:
-        "https://images.unsplash.com/photo-1520975918318-3a28c3d3c4f0?w=400&h=300&fit=crop",
+        "https://images.unsplash.com/photo-1571924849183-a68a3879348d?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZmFzaGlvbiUyMHJ1bndheXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=500",
       ageGroup: "13+",
       difficulty: "Medium",
       duration: "90 mins",
@@ -5302,7 +5241,7 @@ const gamesData = {
       name: "Cook-Off Challenge",
       type: "Cooking Game",
       image:
-        "https://images.unsplash.com/photo-1600891964091-8ad29b8d76a6?w=400&h=300&fit=crop",
+        "https://media.istockphoto.com/id/185327871/photo/two-chefs-in-the-kitchen.webp?a=1&b=1&s=612x612&w=0&k=20&c=YINSIGT6gK50SjSgjPNMqOs0VqYS1_3JkyLeMt3caGU=",
       ageGroup: "15+",
       difficulty: "Medium",
       duration: "2 hours",
@@ -5344,7 +5283,7 @@ const gamesData = {
       name: "Picnic Escape",
       type: "Outdoor Game",
       image:
-        "https://images.unsplash.com/photo-1621609771181-2d5b1e3e9cb2?w=400&h=300&fit=crop",
+        "https://images.unsplash.com/photo-1592753054398-9fa298d40e85?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cGljbmljfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=500",
       ageGroup: "All Ages",
       difficulty: "Easy",
       duration: "3 hours",
