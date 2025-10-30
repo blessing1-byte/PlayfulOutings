@@ -12,9 +12,6 @@ import PageContainer from "../Components/Pages/PageContainer";
 import GameCards from "../Components/Layout/GamesCard";
 import ItineraryMap from "../Components/Layout/ItineraryMap";
 import ItineraryDetail from "../Components/Layout/ItineraryDetail";
-import Saved from "../Components/Layout/Saved";
-import Favorite from "../Components/Layout/Favorite";
-import BookTicket from "../Components/Layout/BookTicket";
 import { gamesData } from "./Data/gameData";
 import Login from "./UI/Login";
 import Signup from "./UI/Signup";
@@ -33,8 +30,6 @@ export const RouteConfig = [
       { path: "login", element: <Login /> },
       { path: "signup", element: <Signup /> },
       //  User pages
-      { path: "saved", element: <Saved /> },
-      { path: "favorite", element: <Favorite /> },
 
       //  Game details page (dynamic)
       {
@@ -43,7 +38,6 @@ export const RouteConfig = [
       }, //  All itineraries page
       { path: "itinerary", element: <Itinerary />, label: "Itinerary" },
       { path: "/itinerary/:category/:gameName", element: <ItineraryDetail /> }, //  Dynamic itinerary detail page
-      //  must not start with "/"
       {
         path: "itinerary/:category/:name",
         element: <ItineraryDetail gamesData={gamesData} />,
@@ -51,12 +45,6 @@ export const RouteConfig = [
 
       //  Map view (optional)
       { path: "map", element: <ItineraryMap /> },
-
-      //  Booking page (for specific locations)
-      {
-        path: "book/:locationSlug",
-        element: <BookTicket />,
-      },
     ],
   },
 ];

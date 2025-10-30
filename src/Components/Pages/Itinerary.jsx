@@ -89,7 +89,7 @@ const Itinerary = () => {
                         className="view-btn"
                         onClick={() => handleViewAndBook(category, game.name)}
                       >
-                        View & Book
+                        View
                       </Button>
                     ) : (
                       <p className="free-label">

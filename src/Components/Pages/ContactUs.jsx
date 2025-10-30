@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { Facebook, Twitter, Instagram, Youtube } from "lucide-react";
-import "../CSS/ContactUs.css"
+import "../CSS/ContactUs.css";
+import { Facebook, Twitter, Instagram, Linkedin, Youtube } from "lucide-react";
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -32,8 +32,12 @@ const ContactUs = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-
-    if (!formData.name || !formData.email || !formData.phone || !formData.message) {
+    if (
+      !formData.name ||
+      !formData.email ||
+      !formData.phone ||
+      !formData.message
+    ) {
       alert("Please fill out all required fields.");
       return;
     }
@@ -49,7 +53,10 @@ const ContactUs = () => {
     setButtonText("Submitting...");
 
     setTimeout(() => {
-      localStorage.setItem("playfulOutingsContactForm", JSON.stringify(formData));
+      localStorage.setItem(
+        "playfulOutingsContactForm",
+        JSON.stringify(formData)
+      );
       setButtonText("Submitted Successfully");
 
       setTimeout(() => {
@@ -81,26 +88,32 @@ const ContactUs = () => {
         <div className="contact-container">
           <div className="contact-left">
             <h2>Get in touch</h2>
-            <p>We’d love to hear from you. Reach out to PlayfulOutings anytime!</p>
+            <p>
+              We’d love to hear from you. Reach out to PlayfulOutings anytime!
+            </p>
             <div className="contact-info">
-              <p><strong>Head Office:</strong><br /> 123 Fun Avenue, Lagos, Nigeria</p>
-              <p><strong>Email Us:</strong><br /> support@playfuloutings.com</p>
-              <p><strong>Call Us:</strong><br /> +234 800 123 4567</p>
-              <p><strong>Follow us on our socials:</strong></p>
+              <p>
+                <strong>Head Office:</strong>
+                <br /> 123 Fun Avenue, Lagos, Nigeria
+              </p>
+              <p>
+                <strong>Email Us:</strong>
+                <br /> support@playfuloutings.com
+              </p>
+              <p>
+                <strong>Call Us:</strong>
+                <br /> +234 800 123 4567
+              </p>
+              <p>
+                <strong>Follow us on our socials:</strong>
+              </p>
             </div>
             <div className="socials">
-              <a href="#" aria-label="Facebook">
-                <Facebook className="social-icon" />
-              </a>
-              <a href="#" aria-label="Twitter">
-                <Twitter className="social-icon" />
-              </a>
-              <a href="#" aria-label="Instagram">
-                <Instagram className="social-icon" />
-              </a>
-              <a href="#" aria-label="YouTube">
-                <Youtube className="social-icon" />
-              </a>
+              <Facebook />
+              <Twitter />
+              <Instagram />
+              <Linkedin />
+              <Youtube />
             </div>
           </div>
 
@@ -174,7 +187,6 @@ const ContactUs = () => {
         ></iframe>
       </section>
     </div>
-
   );
 };
 

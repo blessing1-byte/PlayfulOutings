@@ -76,26 +76,30 @@
   padding: 0;
 }
 
-.footer-column ul li {
+.footer-column ul .li {
   margin-bottom: 0.5rem;
   color: #cbd5e1;
   font-size: 0.9rem;
   cursor: pointer;
   transition: color 0.3s ease;
+  text-decoration: none;
+  display: flex;
 }
 
-.footer-column ul li:hover {
+.footer-column ul .li:hover {
   color: #38bdf8;
 }
 
 /* === Contact Info === */
-.contact-info li {
+.contact-info .li {
   display: flex;
   align-items: center;
   gap: 8px;
   color: #cbd5e1;
   margin-bottom: 0.5rem;
   font-size: 0.9rem;
+  text-decoration: none;
+  display: flex;
 }
 
 /* === Socials === */
