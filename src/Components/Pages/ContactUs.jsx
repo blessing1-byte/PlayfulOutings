@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Facebook, Twitter, Instagram, Youtube } from "lucide-react";
 import "../CSS/ContactUs.css"
 
 const ContactUs = () => {
@@ -31,7 +32,7 @@ const ContactUs = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-   
+
     if (!formData.name || !formData.email || !formData.phone || !formData.message) {
       alert("Please fill out all required fields.");
       return;
@@ -77,83 +78,91 @@ const ContactUs = () => {
         </div>
       </section>
       <section className="contact-section">
-      <div className="contact-container">
-        <div className="contact-left">
-          <h2>Get in touch</h2>
-          <p>We’d love to hear from you. Reach out to PlayfulOutings anytime!</p>
-          <div className="contact-info">
-            <p><strong>Head Office:</strong><br /> 123 Fun Avenue, Lagos, Nigeria</p>
-            <p><strong>Email Us:</strong><br /> support@playfuloutings.com</p>
-            <p><strong>Call Us:</strong><br /> +234 800 123 4567</p>
-            <p><strong>Follow us on our socials:</strong></p>
-          </div>
-          <div className="socials">
-            <a href="#"><i className="bi bi-facebook"></i></a>
-            <a href="#"><i className="bi bi-twitter"></i></a>
-            <a href="#"><i className="bi bi-instagram"></i></a>
-            <a href="#"><i className="bi bi-youtube"></i></a>
-          </div>
-        </div>
-
-        <div className="contact-right">
-          <h2>Send us a message</h2>
-          <form onSubmit={handleSubmit}>
-            <div className="form-grid">
-              <input
-                type="text"
-                name="name"
-                placeholder="Name *"
-                value={formData.name}
-                onChange={handleChange}
-                required
-              />
-              <input
-                type="text"
-                name="company"
-                placeholder="Company"
-                value={formData.company}
-                onChange={handleChange}
-              />
-              <input
-                type="tel"
-                name="phone"
-                placeholder="Phone *"
-                value={formData.phone}
-                onChange={handleChange}
-                required
-              />
-              <input
-                type="email"
-                name="email"
-                placeholder="Email *"
-                value={formData.email}
-                onChange={handleChange}
-                required
-              />
+        <div className="contact-container">
+          <div className="contact-left">
+            <h2>Get in touch</h2>
+            <p>We’d love to hear from you. Reach out to PlayfulOutings anytime!</p>
+            <div className="contact-info">
+              <p><strong>Head Office:</strong><br /> 123 Fun Avenue, Lagos, Nigeria</p>
+              <p><strong>Email Us:</strong><br /> support@playfuloutings.com</p>
+              <p><strong>Call Us:</strong><br /> +234 800 123 4567</p>
+              <p><strong>Follow us on our socials:</strong></p>
             </div>
-            <input
-              type="text"
-              name="subject"
-              placeholder="Subject"
-              value={formData.subject}
-              onChange={handleChange}
-            />
-            <textarea
-              name="message"
-              placeholder="Message *"
-              rows="5"
-              value={formData.message}
-              onChange={handleChange}
-              required
-            ></textarea>
-            <button type="submit" className="submit-btn">
-              {buttonText}
-            </button>
-          </form>
+            <div className="socials">
+              <a href="#" aria-label="Facebook">
+                <Facebook className="social-icon" />
+              </a>
+              <a href="#" aria-label="Twitter">
+                <Twitter className="social-icon" />
+              </a>
+              <a href="#" aria-label="Instagram">
+                <Instagram className="social-icon" />
+              </a>
+              <a href="#" aria-label="YouTube">
+                <Youtube className="social-icon" />
+              </a>
+            </div>
+          </div>
+
+          <div className="contact-right">
+            <h2>Send us a message</h2>
+            <form onSubmit={handleSubmit}>
+              <div className="form-grid">
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Name *"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+                />
+                <input
+                  type="text"
+                  name="company"
+                  placeholder="Company"
+                  value={formData.company}
+                  onChange={handleChange}
+                />
+                <input
+                  type="tel"
+                  name="phone"
+                  placeholder="Phone *"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  required
+                />
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Email *"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+              <input
+                type="text"
+                name="subject"
+                placeholder="Subject"
+                value={formData.subject}
+                onChange={handleChange}
+              />
+              <textarea
+                name="message"
+                placeholder="Message *"
+                rows="5"
+                value={formData.message}
+                onChange={handleChange}
+                required
+              ></textarea>
+              <button type="submit" className="submit-btn">
+                {buttonText}
+              </button>
+            </form>
+          </div>
         </div>
-      </div>
-    </section>
-    <section className="map-section">
+      </section>
+      <section className="map-section">
         <iframe
           title="PlayfulOutings Location"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3974.012023220865!2d3.379205974964339!3d6.524379423386339!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8b3b5b4d96a1%3A0x1f1fcd181d1c1f1f!2sLagos%2C%20Nigeria!5e0!3m2!1sen!2sng!4v1697482000000!5m2!1sen!2sng"
@@ -165,7 +174,7 @@ const ContactUs = () => {
         ></iframe>
       </section>
     </div>
-    
+
   );
 };
 

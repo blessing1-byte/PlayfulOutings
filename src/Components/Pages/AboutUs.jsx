@@ -1,132 +1,80 @@
 import React from "react";
-import { FaUsers, FaLightbulb, FaHeart, FaHandsHelping } from "react-icons/fa";
-import "../CSS/About.css";
-import { Button } from "../UI/Button";
-import { Link } from "react-router-dom";
-const AboutUs = () => {
+import "../CSS/AboutUs.css";
+
+const About = () => {
   return (
-    <div className="about-container">
-      {/* Hero Section */}
-      <section className="hero">
-        <div className="hero-content">
-          <h1>Creating Joyful Moments Through Play</h1>
-          <p>
-            At <strong>PlayfulOutings</strong>, we design experiences that bring
-            people together through laughter, creativity, and fun.
-          </p>
-          {/* <Button>
-            <Link className="btn" to="games">
-              Explore Our Games
-            </Link>
-          </Button> */}
+    <div className="about-page">
+      {/* Banner Section */}
+      <section className="about-banner">
+        <div className="banner-text">
+          <h1>About Playful Outings</h1>
         </div>
       </section>
 
-      {/* Story Section */}
-      <section className="story">
-        <h2>Our Story</h2>
-        <p>
-          What began as a simple passion for games has evolved into a mission to
-          reconnect families, friends, and communities through play. At
-          <strong> PlayfulOutings</strong>, every game we share celebrates
-          connection, learning, and unforgettable memories.
-        </p>
+      {/* Mission & Vision */}
+      <section className="about-mission">
+        <div className="section-box">
+          <h2>Our Mission</h2>
+          <p>
+            At Playful Outings, our mission is to design memorable experiences
+            that inspire laughter, creativity, and human connection. We believe
+            play is not just for kids — it’s the universal language of joy.
+          </p>
+        </div>
+        <div className="section-box">
+          <h2>Our Vision</h2>
+          <p>
+            To be the leading community-driven brand redefining how people
+            unwind and connect — one playful moment at a time.
+          </p>
+        </div>
       </section>
 
-      {/* Values Section */}
-      <section className="values">
+      {/* Attributes Section */}
+      <section className="about-attributes">
         <h2>Our Core Values</h2>
-        <div className="values-grid">
-          <div className="value-card">
-            <FaLightbulb className="value-icon" />
+        <div className="attribute-grid">
+          <div className="attribute-card">
+            <img src="https://cdn-icons-png.freepik.com/512/8693/8693569.png" alt="Innovation" />
             <h3>Innovation</h3>
-            <p>
-              We keep reinventing how fun is shared — creatively and
-              inclusively.
-            </p>
+            <p>We bring new ideas to every event, turning imagination into reality.</p>
           </div>
-          <div className="value-card">
-            <FaUsers className="value-icon" />
+          <div className="attribute-card">
+            <img src="https://www.pngkey.com/png/full/290-2901269_safety-first-sign-png-acm-logo.png" alt="Safety" />
+            <h3>Safety</h3>
+            <p>Every activity is designed with comfort and security at heart.</p>
+          </div>
+          <div className="attribute-card">
+            <img src="https://static.vecteezy.com/system/resources/previews/055/142/670/non_2x/illustration-of-a-blue-group-of-people-icons-showing-community-teamwork-and-collective-leadership-on-a-transparent-background-png.png" alt="Community" />
             <h3>Community</h3>
-            <p>
-              Play is better together — we believe in unity through joyful
-              moments.
-            </p>
+            <p>We believe joy grows stronger when shared with others.</p>
           </div>
-          <div className="value-card">
-            <FaHeart className="value-icon" />
-            <h3>Passion</h3>
-            <p>
-              Driven by love for creativity, play, and the art of connection.
-            </p>
-          </div>
-          <div className="value-card">
-            <FaHandsHelping className="value-icon" />
-            <h3>Impact</h3>
-            <p>
-              Every experience we create aims to uplift and inspire
-              togetherness.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Vision and Mission */}
-      <section className="vision-mission">
-        <div className="card">
-          <h3>Our Vision</h3>
-          <p>
-            To become the go-to destination for unique indoor and outdoor fun —
-            redefining how people connect and play.
-          </p>
-        </div>
-        <div className="card">
-          <h3>Our Mission</h3>
-          <p>
-            To craft meaningful experiences that blend creativity, adventure,
-            and joy for every generation.
-          </p>
         </div>
       </section>
 
       {/* Team Section */}
-      <section className="team">
+      <section className="about-team">
         <h2>Meet Our Team</h2>
         <div className="team-grid">
-          <div className="team-card">
-            <img
-              src="https://images.unsplash.com/photo-1594824476967-48c8b9642738?w=300"
-              alt="Blessing"
-            />
-            <h4>Blessing</h4>
-            <p>Founder & Creative Lead</p>
+          <div className="team-member">
+            <img src="https://www.transparentpng.com/download/user/gray-user-profile-icon-png-fP8Q1P.png" alt="Team Member 1" />
+            <h3>Blessing Udom</h3>
+            <p>Founder & Creative Director</p>
           </div>
-
-          <div className="team-card">
-            <img
-              src="https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?w=300"
-              alt="Alex"
-            />
-            <h4>Alex</h4>
+          <div className="team-member">
+            <img src="https://www.transparentpng.com/download/user/gray-user-profile-icon-png-fP8Q1P.png" alt="Team Member 2" />
+            <h3>Emerald Jonathan</h3>
             <p>Experience Designer</p>
           </div>
-
-          <div className="team-card">
-            <img
-              src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?w=300"
-              alt="Joy"
-            />
-            <h4>Joy</h4>
-            <p>Community Relations</p>
+          <div className="team-member">
+            <img src="https://www.transparentpng.com/download/user/gray-user-profile-icon-png-fP8Q1P.png" alt="Team Member 3" />
+            <h3>Ikedinachi Anyadike</h3>
+            <p>Operations Lead</p>
           </div>
-
-          <div className="team-card">
-            <img
-              src="https://images.unsplash.com/photo-1603415526960-f7e0328e3d4e?w=300"
-              alt="Samuel"
-            />
-            <h4>Samuel</h4>
-            <p>Operations & Growth</p>
+          <div className="team-member">
+            <img src="https://www.transparentpng.com/download/user/gray-user-profile-icon-png-fP8Q1P.png" alt="Team Member 4" />
+            <h3>Oluwatobi Gabriel</h3>
+            <p>Community Manager</p>
           </div>
         </div>
       </section>
@@ -134,4 +82,4 @@ const AboutUs = () => {
   );
 };
 
-export default AboutUs;
+export default About;
