@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../CSS/ContactUs.css";
+import { Facebook, Twitter, Instagram, Linkedin, Youtube } from "lucide-react";
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -108,18 +109,11 @@ const ContactUs = () => {
               </p>
             </div>
             <div className="socials">
-              <a href="#">
-                <i className="bi bi-facebook"></i>
-              </a>
-              <a href="#">
-                <i className="bi bi-twitter"></i>
-              </a>
-              <a href="#">
-                <i className="bi bi-instagram"></i>
-              </a>
-              <a href="#">
-                <i className="bi bi-youtube"></i>
-              </a>
+              <Facebook />
+              <Twitter />
+              <Instagram />
+              <Linkedin />
+              <Youtube />
             </div>
           </div>
 

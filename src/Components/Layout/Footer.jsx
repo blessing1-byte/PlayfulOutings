@@ -10,8 +10,9 @@ import {
   Linkedin,
   Youtube,
 } from "lucide-react";
-import "../CSS/Footer.css";
+import "../CSS/footer.css";
 import ScrollingTicker from "../UI/ScrollingTicker";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -41,11 +42,21 @@ export default function Footer() {
         <div className="footer-column">
           <h3>Explore</h3>
           <ul>
-            <li>Home</li>
-            <li>Games</li>
-            <li>Itineraries</li>
-            <li>About Us</li>
-            <li>Contact</li>
+            <Link to="/" className="li">
+              Home
+            </Link>
+            <Link to="games" className="li">
+              Games
+            </Link>
+            <Link to="itinerary" className="li">
+              Itineraries
+            </Link>
+            <Link to="about" className="li">
+              About Us
+            </Link>
+            <Link to="contact" className="li">
+              Contact
+            </Link>
           </ul>
         </div>
 
@@ -53,11 +64,18 @@ export default function Footer() {
         <div className="footer-column">
           <h3>Activities</h3>
           <ul>
-            <li>Outdoor Adventures</li>
-            <li>Indoor Challenges</li>
-            <li>Team Games</li>
-            <li>Picnic Plans</li>
-            <li>Kids’ Fun</li>
+            <Link to="games" className="li">
+              Outdoor Adventures
+            </Link>
+            <Link to="games" className="li">
+              Indoor Challenges
+            </Link>
+            <Link to="games" className="li">
+              Family Games
+            </Link>
+            <Link to="games" className="li">
+              Kids’ Fun
+            </Link>
           </ul>
         </div>
 
