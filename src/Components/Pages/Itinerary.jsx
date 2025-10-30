@@ -14,19 +14,6 @@ const Itinerary = () => {
   const categories = Object.keys(gamesData);
 
   // Handle view and booking logic
-  const handleViewAndBook = (category, gameName) => {
-    const user = JSON.parse(localStorage.getItem("loggedInUser"));
-
-    if (!user) {
-      setSelectedGame({ category, name: gameName });
-      setAlertOpen(true);
-      return;
-    }
-
-    navigate(
-      `/itinerary/${category}/${gameName.toLowerCase().replace(/\s+/g, "-")}`
-    );
-  };
 
   return (
     <div className="itinerary-page">
@@ -43,10 +30,6 @@ const Itinerary = () => {
 
           <div className="itinerary-grid">
             {gamesData[category].map((game) => {
-              const hasPaidLocation = game.locations.some(
-                (loc) => loc.ticketPrice && loc.ticketPrice > 0
-              );
-
               return (
                 <div key={game.name} className="itinerary-card">
                   <img
@@ -84,18 +67,6 @@ const Itinerary = () => {
                     </div>
 
                     {/*  Button or Free Label */}
-                    {hasPaidLocation ? (
-                      <Button
-                        className="view-btn"
-                        onClick={() => handleViewAndBook(category, game.name)}
-                      >
-                        View & Book
-                      </Button>
-                    ) : (
-                      <p className="free-label">
-                        Free Game — No Booking Needed
-                      </p>
-                    )}
                   </div>
                 </div>
               );

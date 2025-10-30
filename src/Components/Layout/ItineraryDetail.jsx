@@ -102,15 +102,6 @@ export default function ItineraryDetail() {
                 {loc.ticketPrice > 0 ? `₦${loc.ticketPrice}` : "Free"}
               </p>
             </div>
-            {loc.ticketPrice > 0 && (
-              <Button
-                onClick={() =>
-                  navigate(`/book/${encodeURIComponent(loc.name)}`)
-                }
-              >
-                View & Book
-              </Button>
-            )}
           </div>
         ))}
       </div>
