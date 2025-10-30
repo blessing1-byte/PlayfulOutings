@@ -10,7 +10,7 @@ import {
   Linkedin,
   Youtube,
 } from "lucide-react";
-import "../CSS/footer.css";
+import "../CSS/Footer.css";
 import ScrollingTicker from "../UI/ScrollingTicker";
 import { Link } from "react-router-dom";
 
