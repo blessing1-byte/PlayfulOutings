@@ -2,7 +2,7 @@ import React from "react";
 import { FaUsers, FaLightbulb, FaHeart, FaHandsHelping } from "react-icons/fa";
 import "../CSS/About.css";
 import blessingImg from "../assets/blessing.jpg";
-import emeraldImg from "../assets/emerald.jpg";
+import emeraldImg from "../assets/emerad.jpg";
 import ijeomaImg from "../assets/ijeoma.jpg";
 import { Button } from "../UI/Button";
 import { Link } from "react-router-dom";

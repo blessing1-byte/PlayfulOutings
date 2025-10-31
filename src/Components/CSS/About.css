@@ -157,8 +157,10 @@
   width: 100%;
   border-radius: var(--radius);
   margin-bottom: 15px;
-  height: 240px;
+  height: 450px;
   object-fit: cover;
+  background-position: center;
+  /* background-size: contain; */
 }
 .team-card h4 {
   font-size: 1.1rem;
