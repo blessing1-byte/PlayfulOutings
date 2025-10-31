@@ -1,6 +1,9 @@
 import React from "react";
 import { FaUsers, FaLightbulb, FaHeart, FaHandsHelping } from "react-icons/fa";
 import "../CSS/About.css";
+import blessingImg from "../assets/blessing.jpg";
+import emeraldImg from "../assets/emerald.jpg";
+import ijeomaImg from "../assets/ijeoma.jpg";
 import { Button } from "../UI/Button";
 import { Link } from "react-router-dom";
 const AboutUs = () => {
@@ -94,40 +97,31 @@ const AboutUs = () => {
         <h2>Meet Our Team</h2>
         <div className="team-grid">
           <div className="team-card">
-            <img
-              src="https://images.unsplash.com/photo-1594824476967-48c8b9642738?w=300"
-              alt="Blessing"
-            />
+            <img src={blessingImg} alt="Blessing" />
             <h4>Blessing</h4>
             <p>Founder & Creative Lead</p>
           </div>
 
           <div className="team-card">
-            <img
-              src="https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?w=300"
-              alt="Alex"
-            />
-            <h4>Alex</h4>
+            <img src={ijeomaImg} alt="ijeoma" />
+            <h4>Ijeoma</h4>
             <p>Experience Designer</p>
           </div>
 
           <div className="team-card">
-            <img
-              src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?w=300"
-              alt="Joy"
-            />
-            <h4>Joy</h4>
-            <p>Community Relations</p>
+            <img src={emeraldImg} alt="emerald" />
+            <h4>Emerald</h4>
+            <p>Co Founder</p>
           </div>
 
-          <div className="team-card">
+          {/* <div className="team-card">
             <img
               src="https://images.unsplash.com/photo-1603415526960-f7e0328e3d4e?w=300"
               alt="Samuel"
             />
             <h4>Samuel</h4>
             <p>Operations & Growth</p>
-          </div>
+          </div> */}
         </div>
       </section>
     </div>
